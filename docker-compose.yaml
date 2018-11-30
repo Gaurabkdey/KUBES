@@ -12,6 +12,7 @@ services:
     - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/1524bb91590c3d64779eebb23032405a53ed239d872b6836f69a1e5647dde0f4_sk
     - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.buyernet-cert.pem
     - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/1524bb91590c3d64779eebb23032405a53ed239d872b6836f69a1e5647dde0f4_sk
+    - FABRIC_CA_SERVER_CA_NAME=ca.buyernet
     volumes:
     - ./crypto-config/peerOrganizations/buyernet/ca/:/etc/hyperledger/fabric-ca-server-config
     ports:
@@ -28,6 +29,7 @@ services:
     - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/71f19576c2566317301b92983648064cd31e80830db4004b4b92639002b23abe_sk
     - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.sellernet-cert.pem
     - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/71f19576c2566317301b92983648064cd31e80830db4004b4b92639002b23abe_sk
+    - FABRIC_CA_SERVER_CA_NAME=ca.sellernet
     volumes:
     - ./crypto-config/peerOrganizations/sellernet/ca/:/etc/hyperledger/fabric-ca-server-config
     ports:
@@ -44,6 +46,7 @@ services:
     - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/5550e4f9b6a8dcf11f9d9d7a58a137ea7717129c25074fb455612d7e38554342_sk
     - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.transnet-cert.pem
     - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/5550e4f9b6a8dcf11f9d9d7a58a137ea7717129c25074fb455612d7e38554342_sk
+    - FABRIC_CA_SERVER_CA_NAME=ca.transnet
     volumes:
     - ./crypto-config/peerOrganizations/transnet/ca/:/etc/hyperledger/fabric-ca-server-config
     ports:
